@@ -1,5 +1,10 @@
 #!/bin/bash
 IFS=$'\n'
+#Linea que se encarga de conectarse al gateway y traer el archivo de los datos
+#OJO el punto significa la ruta actual, donde me encuentro en este momento.
+#sshpass -p "dragino" scp root@10.130.1.1:/root/datos/datos.txt /home/ubuntu/Desktop/pdg/datos.txt
+sshpass -p "dragino" scp root@10.130.1.1:/root/datos/datos.txt .
+
 #Esta linea crea un archivo con los datos de la tabla
 #mysql -u root -ppassword -N -D prueba -h localhost -e "SELECT * FROM info" > tablaMysql.txt
 

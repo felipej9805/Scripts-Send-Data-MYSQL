@@ -1,3 +1,8 @@
-idpacket:40.00  fecha:170420  tiempo:18043200  latitud:3.535020  longitud:-76.316236  velocidad:0.37  altitud:1020.20
 idpacket:36.00  fecha:170420  tiempo:18041100  latitud:3.535036  longitud:-76.316196  velocidad:0.96  altitud:1020.80  
 idpacket:37.00  fecha:170420  tiempo:18041600  latitud:3.535042  longitud:-76.316200  velocidad:2.46  altitud:1020.90  
+idpacket:38.00  fecha:170420  tiempo:18042100  latitud:3.535039  longitud:-76.316211  velocidad:1.02  altitud:1020.20  
+idpacket:39.00  fecha:170420  tiempo:18042100  latitud:3.535039  longitud:-76.316211  velocidad:1.02  altitud:1020.20  
+idpacket:40.00  fecha:170420  tiempo:18043200  latitud:3.535020  longitud:-76.316236  velocidad:0.37  altitud:1020.20  
+idpacket:41.00  fecha:170420  tiempo:18043700  latitud:3.535025  longitud:-76.316228  velocidad:0.39  altitud:1020.00  
+
+
