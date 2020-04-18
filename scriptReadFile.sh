@@ -1,5 +1,7 @@
 #!/bin/bash
 IFS=$'\n'
+#Esta linea crea un archivo con los datos de la tabla
+#mysql -u root -ppassword -N -D prueba -h localhost -e "SELECT * FROM info" > tablaMysql.txt
 
 for i in `cat /home/ubuntu/Desktop/pdg/datos.txt`
     do
@@ -31,11 +33,11 @@ for i in `cat /home/ubuntu/Desktop/pdg/datos.txt`
     bloquealtitud=`echo $i | awk -F"  " '{print $7}'`
     valoraltitud=`echo $bloquealtitud | awk -F":" '{print $2}'`
 
-    #QUERY SQL
-    mysql -u root -ppassword -D prueba -h localhost -e "INSERT INTO info (idpacket, fecha, 
-    tiempo, latitud, longitud, 
-    velocidad, altitud) 
-    VALUES ('$valoridpacket', '$valorfecha', '$valortiempo', '$valorlatitud', 
-    '$valorlongitud', '$valorvelocidad', '$valoraltitud'); " > /dev/null 2>&1
+    #QUERY SQL QUE SE ENCARGA DE AGREGAR TODOS LOS DATOS DEL ARCHIVO
+#    mysql -u root -ppassword -D prueba -h localhost -e "INSERT INTO info (idpacket, fecha, 
+#    tiempo, latitud, longitud, 
+#    velocidad, altitud) 
+#    VALUES ('$valoridpacket', '$valorfecha', '$valortiempo', '$valorlatitud', 
+#    '$valorlongitud', '$valorvelocidad', '$valoraltitud'); " > /dev/null 2>&1
 
     done
