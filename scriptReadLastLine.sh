@@ -9,8 +9,11 @@ sshpass -p "dragino" scp root@10.130.1.1:/root/datos/datos.txt .
 #mysql -u root -ppassword -N -D prueba -h localhost -e "SELECT * FROM info" > tablaMysql.txt
 
 linea=$( tail -n 1 datos.txt )
+if [ "$linea" == "" ]; then
+    echo "Archivo del gateway sin datos todavia"
+else
 
-#IDPACKET
+    #IDPACKET
     bloqueidpacket=`echo $linea | awk -F"  " '{print $1}'`
     valoridpacket=`echo $bloqueidpacket | awk -F":" '{print $2}'`
 
@@ -43,6 +46,7 @@ linea=$( tail -n 1 datos.txt )
     tiempo, latitud, longitud, 
     velocidad, altitud) 
     VALUES ('$valoridpacket', '$valorfecha', '$valortiempo', '$valorlatitud', 
-    '$valorlongitud', '$valorvelocidad', '$valoraltitud'); " > /dev/null 2>&1
+    '$valorlongitud', '$valorvelocidad', '$valoraltitud'); " 
+    echo "Enviado"
 
-
+fi
